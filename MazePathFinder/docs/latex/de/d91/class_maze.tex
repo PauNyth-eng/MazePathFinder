@@ -1,0 +1,70 @@
+\hypertarget{class_maze}{}\doxysection{Maze Class Reference}
+\label{class_maze}\index{Maze@{Maze}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_maze_a325569163c9d9f72bab3c0dabc22217f}{Read\+File}} (string filename)
+\begin{DoxyCompactList}\small\item\em Fuction for reading file with data and saving important data to atributes of class \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_maze_a4108bbbb8269d87ff566aacb260b09d1}\label{class_maze_a4108bbbb8269d87ff566aacb260b09d1}} 
+void {\bfseries Print\+Maze} ()
+\begin{DoxyCompactList}\small\item\em Functions for listing the maze to the console \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_maze_ada3cd96b69dc4fc418b9507f931edddc}{Find\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Public function Find\+Path \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_maze_a87bd5571ce61a341cbe92da2f45dddaa}\label{class_maze_a87bd5571ce61a341cbe92da2f45dddaa}} 
+void {\bfseries Write\+Path} ()
+\begin{DoxyCompactList}\small\item\em Functions for entering the path to the maze \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_maze_ae6994923487360335a847a2678d94e5b}{Write\+File}} (string filename)
+\begin{DoxyCompactList}\small\item\em Function, which create new file with correct path in the maze \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_maze_ada3cd96b69dc4fc418b9507f931edddc}\label{class_maze_ada3cd96b69dc4fc418b9507f931edddc}} 
+\index{Maze@{Maze}!FindPath@{FindPath}}
+\index{FindPath@{FindPath}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{FindPath()}{FindPath()}}
+{\footnotesize\ttfamily bool Maze\+::\+Find\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Public function Find\+Path 
+
+\begin{DoxyReturn}{Returns}
+Return if maze has path, calling internal\+Find\+Path
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_maze_a325569163c9d9f72bab3c0dabc22217f}\label{class_maze_a325569163c9d9f72bab3c0dabc22217f}} 
+\index{Maze@{Maze}!ReadFile@{ReadFile}}
+\index{ReadFile@{ReadFile}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{ReadFile()}{ReadFile()}}
+{\footnotesize\ttfamily bool Maze\+::\+Read\+File (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Fuction for reading file with data and saving important data to atributes of class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of uploaded file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return TRUE if file is written correctly otherwise FALSE if one of conditions are met
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_maze_ae6994923487360335a847a2678d94e5b}\label{class_maze_ae6994923487360335a847a2678d94e5b}} 
+\index{Maze@{Maze}!WriteFile@{WriteFile}}
+\index{WriteFile@{WriteFile}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{WriteFile()}{WriteFile()}}
+{\footnotesize\ttfamily bool Maze\+::\+Write\+File (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Function, which create new file with correct path in the maze 
+
+\begin{DoxyReturn}{Returns}
+Returns TRUE if everything went right, FALSE if file couldn\textquotesingle{}t be opened
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Maze.\+h\item 
+Maze.\+cpp\end{DoxyCompactItemize}

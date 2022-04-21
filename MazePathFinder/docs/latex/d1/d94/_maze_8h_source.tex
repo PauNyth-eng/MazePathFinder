@@ -1,0 +1,34 @@
+\hypertarget{_maze_8h_source}{}\doxysection{Maze.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <tuple>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <ctype.h>}}
+\DoxyCodeLine{7 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_maze}{Maze}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \textcolor{keyword}{private}:}
+\DoxyCodeLine{12     vector<vector<int>> maze;}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} startX, startY, sizeX, sizeY;}
+\DoxyCodeLine{14     vector<int> helper;}
+\DoxyCodeLine{15     \textcolor{keywordtype}{char} value;}
+\DoxyCodeLine{16     vector<tuple<int, int>> path;}
+\DoxyCodeLine{17     \textcolor{keywordtype}{bool} internalFindPath(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int}  y, tuple<int, int> dir);}
+\DoxyCodeLine{18     \textcolor{keywordtype}{bool} is\_empty(ifstream\& pFile);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_maze}{Maze}}();}
+\DoxyCodeLine{24     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_maze_a325569163c9d9f72bab3c0dabc22217f}{ReadFile}}(\textcolor{keywordtype}{string} filename);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_maze_a4108bbbb8269d87ff566aacb260b09d1}{PrintMaze}}();}
+\DoxyCodeLine{26     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_maze_ada3cd96b69dc4fc418b9507f931edddc}{FindPath}}();}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_maze_a87bd5571ce61a341cbe92da2f45dddaa}{WritePath}}();}
+\DoxyCodeLine{28     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_maze_ae6994923487360335a847a2678d94e5b}{WriteFile}}(\textcolor{keywordtype}{string} filename);}
+\DoxyCodeLine{29 \};}
+
+\end{DoxyCode}
