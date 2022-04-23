@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Hello world: Maze.h Source File</title>
+<title>Path Finder: Maze.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Hello world
+   <div id="projectname">Path Finder
    </div>
   </td>
  </tr>
@@ -81,8 +81,8 @@ $(function() {
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    vector&lt;int&gt; helper;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">char</span> value;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    vector&lt;tuple&lt;int, int&gt;&gt; path;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">bool</span> internalFindPath(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span>  y, tuple&lt;int, int&gt; dir);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">bool</span> is_empty(ifstream&amp; pFile);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../de/d91/class_maze.html#a1d1ba5235c7f7ef7c016d247a476ecdb">internalFindPath</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span>  y, tuple&lt;int, int&gt; dir);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../de/d91/class_maze.html#a34c6dc44e9e6158cfceff89cbe4fbbee">is_empty</a>(ifstream&amp; pFile);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
@@ -95,11 +95,13 @@ $(function() {
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../de/d91/class_maze.html#ae6994923487360335a847a2678d94e5b">WriteFile</a>(<span class="keywordtype">string</span> filename);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
 <div class="ttc" id="aclass_maze_html"><div class="ttname"><a href="../../de/d91/class_maze.html">Maze</a></div><div class="ttdef"><b>Definition:</b> Maze.h:10</div></div>
+<div class="ttc" id="aclass_maze_html_a1d1ba5235c7f7ef7c016d247a476ecdb"><div class="ttname"><a href="../../de/d91/class_maze.html#a1d1ba5235c7f7ef7c016d247a476ecdb">Maze::internalFindPath</a></div><div class="ttdeci">bool internalFindPath(int x, int y, tuple&lt; int, int &gt; dir)</div><div class="ttdoc">Recursive function internalFindPath, Algorithm used for this problem was A* -&gt; Moving to every possib...</div><div class="ttdef"><b>Definition:</b> Maze.cpp:15</div></div>
 <div class="ttc" id="aclass_maze_html_a325569163c9d9f72bab3c0dabc22217f"><div class="ttname"><a href="../../de/d91/class_maze.html#a325569163c9d9f72bab3c0dabc22217f">Maze::ReadFile</a></div><div class="ttdeci">bool ReadFile(string filename)</div><div class="ttdoc">Fuction for reading file with data and saving important data to atributes of class</div><div class="ttdef"><b>Definition:</b> Maze.cpp:45</div></div>
+<div class="ttc" id="aclass_maze_html_a34c6dc44e9e6158cfceff89cbe4fbbee"><div class="ttname"><a href="../../de/d91/class_maze.html#a34c6dc44e9e6158cfceff89cbe4fbbee">Maze::is_empty</a></div><div class="ttdeci">bool is_empty(ifstream &amp;pFile)</div><div class="ttdoc">Function to check if file is empty. Code used from https://stackoverflow.com/questions/2390912/checki...</div><div class="ttdef"><b>Definition:</b> Maze.cpp:96</div></div>
 <div class="ttc" id="aclass_maze_html_a4108bbbb8269d87ff566aacb260b09d1"><div class="ttname"><a href="../../de/d91/class_maze.html#a4108bbbb8269d87ff566aacb260b09d1">Maze::PrintMaze</a></div><div class="ttdeci">void PrintMaze()</div><div class="ttdoc">Functions for listing the maze to the console</div><div class="ttdef"><b>Definition:</b> Maze.cpp:104</div></div>
 <div class="ttc" id="aclass_maze_html_a87bd5571ce61a341cbe92da2f45dddaa"><div class="ttname"><a href="../../de/d91/class_maze.html#a87bd5571ce61a341cbe92da2f45dddaa">Maze::WritePath</a></div><div class="ttdeci">void WritePath()</div><div class="ttdoc">Functions for entering the path to the maze</div><div class="ttdef"><b>Definition:</b> Maze.cpp:122</div></div>
 <div class="ttc" id="aclass_maze_html_ada3cd96b69dc4fc418b9507f931edddc"><div class="ttname"><a href="../../de/d91/class_maze.html#ada3cd96b69dc4fc418b9507f931edddc">Maze::FindPath</a></div><div class="ttdeci">bool FindPath()</div><div class="ttdoc">Public function FindPath</div><div class="ttdef"><b>Definition:</b> Maze.cpp:36</div></div>
-<div class="ttc" id="aclass_maze_html_ae6994923487360335a847a2678d94e5b"><div class="ttname"><a href="../../de/d91/class_maze.html#ae6994923487360335a847a2678d94e5b">Maze::WriteFile</a></div><div class="ttdeci">bool WriteFile(string filename)</div><div class="ttdoc">Function, which create new file with correct path in the maze</div><div class="ttdef"><b>Definition:</b> Maze.cpp:135</div></div>
+<div class="ttc" id="aclass_maze_html_ae6994923487360335a847a2678d94e5b"><div class="ttname"><a href="../../de/d91/class_maze.html#ae6994923487360335a847a2678d94e5b">Maze::WriteFile</a></div><div class="ttdeci">bool WriteFile(string filename)</div><div class="ttdoc">Function, which create new file with correct path in the maze, &quot;solved&quot; added before name</div><div class="ttdef"><b>Definition:</b> Maze.cpp:136</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

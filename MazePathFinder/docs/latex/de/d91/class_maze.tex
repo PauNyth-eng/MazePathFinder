@@ -14,7 +14,41 @@ bool \mbox{\hyperlink{class_maze_ada3cd96b69dc4fc418b9507f931edddc}{Find\+Path}}
 void {\bfseries Write\+Path} ()
 \begin{DoxyCompactList}\small\item\em Functions for entering the path to the maze \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_maze_ae6994923487360335a847a2678d94e5b}{Write\+File}} (string filename)
-\begin{DoxyCompactList}\small\item\em Function, which create new file with correct path in the maze \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function, which create new file with correct path in the maze, \char`\"{}solved\char`\"{} added before name \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_maze_a1d1ba5235c7f7ef7c016d247a476ecdb}{internal\+Find\+Path}} (int x, int y, tuple$<$ int, int $>$ dir)
+\begin{DoxyCompactList}\small\item\em Recursive function internal\+Find\+Path, Algorithm used for this problem was A$\ast$ -\/\texorpdfstring{$>$}{>} Moving to every possible directions (Up, Down, Right, Left) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_maze_a34c6dc44e9e6158cfceff89cbe4fbbee}{is\+\_\+empty}} (ifstream \&p\+File)
+\begin{DoxyCompactList}\small\item\em Function to check if file is empty. Code used from \href{https://stackoverflow.com/questions/2390912/checking-for-an-empty-file-in-c}{\texttt{ https\+://stackoverflow.\+com/questions/2390912/checking-\/for-\/an-\/empty-\/file-\/in-\/c}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_maze_aed5a440490a5ffa3257798dae8da6d18}\label{class_maze_aed5a440490a5ffa3257798dae8da6d18}} 
+vector$<$ vector$<$ int $>$ $>$ {\bfseries maze}
+\item 
+\mbox{\Hypertarget{class_maze_ac983aefd8bacee818e35b4796d22c5aa}\label{class_maze_ac983aefd8bacee818e35b4796d22c5aa}} 
+int {\bfseries startX}
+\item 
+\mbox{\Hypertarget{class_maze_a6fa1e5d0431052f805201b0970b2041d}\label{class_maze_a6fa1e5d0431052f805201b0970b2041d}} 
+int {\bfseries startY}
+\item 
+\mbox{\Hypertarget{class_maze_ac0bd58a7fa90491fefd875a2597cb31a}\label{class_maze_ac0bd58a7fa90491fefd875a2597cb31a}} 
+int {\bfseries sizeX}
+\item 
+\mbox{\Hypertarget{class_maze_af1e86b9c53e9820d620410ac48cb7080}\label{class_maze_af1e86b9c53e9820d620410ac48cb7080}} 
+int {\bfseries sizeY}
+\item 
+\mbox{\Hypertarget{class_maze_a04d38fd3ec0debec65b92aaa1960f00a}\label{class_maze_a04d38fd3ec0debec65b92aaa1960f00a}} 
+vector$<$ int $>$ {\bfseries helper}
+\item 
+\mbox{\Hypertarget{class_maze_af27875b5c681bd88cf4f0d497ed67c52}\label{class_maze_af27875b5c681bd88cf4f0d497ed67c52}} 
+char {\bfseries value}
+\item 
+\mbox{\Hypertarget{class_maze_acdd6e392a0952f01570901eac2316a0c}\label{class_maze_acdd6e392a0952f01570901eac2316a0c}} 
+vector$<$ tuple$<$ int, int $>$ $>$ {\bfseries path}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
@@ -30,6 +64,46 @@ Public function Find\+Path
 
 \begin{DoxyReturn}{Returns}
 Return if maze has path, calling internal\+Find\+Path
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_maze_a1d1ba5235c7f7ef7c016d247a476ecdb}\label{class_maze_a1d1ba5235c7f7ef7c016d247a476ecdb}} 
+\index{Maze@{Maze}!internalFindPath@{internalFindPath}}
+\index{internalFindPath@{internalFindPath}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{internalFindPath()}{internalFindPath()}}
+{\footnotesize\ttfamily bool Maze\+::internal\+Find\+Path (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{tuple$<$ int, int $>$}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Recursive function internal\+Find\+Path, Algorithm used for this problem was A$\ast$ -\/\texorpdfstring{$>$}{>} Moving to every possible directions (Up, Down, Right, Left) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Position x\\
+\hline
+{\em y} & Position y\\
+\hline
+{\em dir} & Direction\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns TRUE if maze has path, FALSE if maze doesn\textquotesingle{}t have path
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_maze_a34c6dc44e9e6158cfceff89cbe4fbbee}\label{class_maze_a34c6dc44e9e6158cfceff89cbe4fbbee}} 
+\index{Maze@{Maze}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily bool Maze\+::is\+\_\+empty (\begin{DoxyParamCaption}\item[{ifstream \&}]{p\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function to check if file is empty. Code used from \href{https://stackoverflow.com/questions/2390912/checking-for-an-empty-file-in-c}{\texttt{ https\+://stackoverflow.\+com/questions/2390912/checking-\/for-\/an-\/empty-\/file-\/in-\/c}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+File} & taking filestream\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return TRUE if file is empty otherwise FALSE if file is still has date in it
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_maze_a325569163c9d9f72bab3c0dabc22217f}\label{class_maze_a325569163c9d9f72bab3c0dabc22217f}} 
 \index{Maze@{Maze}!ReadFile@{ReadFile}}
@@ -57,8 +131,13 @@ Return TRUE if file is written correctly otherwise FALSE if one of conditions ar
 
 
 
-Function, which create new file with correct path in the maze 
+Function, which create new file with correct path in the maze, \char`\"{}solved\char`\"{} added before name 
 
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the uploaded file\\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Returns TRUE if everything went right, FALSE if file couldn\textquotesingle{}t be opened
 \end{DoxyReturn}

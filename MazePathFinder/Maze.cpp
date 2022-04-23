@@ -11,7 +11,7 @@ Maze::Maze()
 /// <param name="x">Position x</param>
 /// <param name="y">Position y</param>
 /// <param name="dir">Direction</param>
-/// <returns></returns>
+/// <returns>Returns TRUE if maze has path, FALSE if maze doesn't have path</returns>
 bool Maze::internalFindPath(int x, int  y, tuple<int, int> dir)
 {
 	if (x < 0 || y < 0 || x > sizeX || y > sizeY || maze[x][y] == 1) return false; // Checking border of maze and at the same time checking if path is directed to the wall, if yes return false

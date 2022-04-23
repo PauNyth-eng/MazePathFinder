@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readfile_0',['ReadFile',['../de/d91/class_maze.html#a325569163c9d9f72bab3c0dabc22217f',1,'Maze']]]
+  ['printmaze_0',['PrintMaze',['../de/d91/class_maze.html#a4108bbbb8269d87ff566aacb260b09d1',1,'Maze']]]
 ];

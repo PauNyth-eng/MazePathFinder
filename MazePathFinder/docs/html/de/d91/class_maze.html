@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Hello world: Maze Class Reference</title>
+<title>Path Finder: Maze Class Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Hello world
+   <div id="projectname">Path Finder
    </div>
   </td>
  </tr>
@@ -64,6 +64,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../df/d30/class_maze-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Maze Class Reference</div></div>
 </div><!--header-->
@@ -86,8 +88,44 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WritePath</b> ()</td>
 <tr class="memdesc:a87bd5571ce61a341cbe92da2f45dddaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions for entering the path to the maze <br /></td></tr>
 <tr class="separator:a87bd5571ce61a341cbe92da2f45dddaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6994923487360335a847a2678d94e5b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d91/class_maze.html#ae6994923487360335a847a2678d94e5b">WriteFile</a> (string filename)</td></tr>
-<tr class="memdesc:ae6994923487360335a847a2678d94e5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function, which create new file with correct path in the maze  <a href="../../de/d91/class_maze.html#ae6994923487360335a847a2678d94e5b">More...</a><br /></td></tr>
+<tr class="memdesc:ae6994923487360335a847a2678d94e5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function, which create new file with correct path in the maze, "solved" added before name  <a href="../../de/d91/class_maze.html#ae6994923487360335a847a2678d94e5b">More...</a><br /></td></tr>
 <tr class="separator:ae6994923487360335a847a2678d94e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a1d1ba5235c7f7ef7c016d247a476ecdb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d91/class_maze.html#a1d1ba5235c7f7ef7c016d247a476ecdb">internalFindPath</a> (int x, int y, tuple&lt; int, int &gt; dir)</td></tr>
+<tr class="memdesc:a1d1ba5235c7f7ef7c016d247a476ecdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive function internalFindPath, Algorithm used for this problem was A* -&gt; Moving to every possible directions (Up, Down, Right, Left)  <a href="../../de/d91/class_maze.html#a1d1ba5235c7f7ef7c016d247a476ecdb">More...</a><br /></td></tr>
+<tr class="separator:a1d1ba5235c7f7ef7c016d247a476ecdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c6dc44e9e6158cfceff89cbe4fbbee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d91/class_maze.html#a34c6dc44e9e6158cfceff89cbe4fbbee">is_empty</a> (ifstream &amp;pFile)</td></tr>
+<tr class="memdesc:a34c6dc44e9e6158cfceff89cbe4fbbee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to check if file is empty. Code used from <a href="https://stackoverflow.com/questions/2390912/checking-for-an-empty-file-in-c">https://stackoverflow.com/questions/2390912/checking-for-an-empty-file-in-c</a>  <a href="../../de/d91/class_maze.html#a34c6dc44e9e6158cfceff89cbe4fbbee">More...</a><br /></td></tr>
+<tr class="separator:a34c6dc44e9e6158cfceff89cbe4fbbee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aed5a440490a5ffa3257798dae8da6d18"><td class="memItemLeft" align="right" valign="top"><a id="aed5a440490a5ffa3257798dae8da6d18" name="aed5a440490a5ffa3257798dae8da6d18"></a>
+vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>maze</b></td></tr>
+<tr class="separator:aed5a440490a5ffa3257798dae8da6d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac983aefd8bacee818e35b4796d22c5aa"><td class="memItemLeft" align="right" valign="top"><a id="ac983aefd8bacee818e35b4796d22c5aa" name="ac983aefd8bacee818e35b4796d22c5aa"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>startX</b></td></tr>
+<tr class="separator:ac983aefd8bacee818e35b4796d22c5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa1e5d0431052f805201b0970b2041d"><td class="memItemLeft" align="right" valign="top"><a id="a6fa1e5d0431052f805201b0970b2041d" name="a6fa1e5d0431052f805201b0970b2041d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>startY</b></td></tr>
+<tr class="separator:a6fa1e5d0431052f805201b0970b2041d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0bd58a7fa90491fefd875a2597cb31a"><td class="memItemLeft" align="right" valign="top"><a id="ac0bd58a7fa90491fefd875a2597cb31a" name="ac0bd58a7fa90491fefd875a2597cb31a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>sizeX</b></td></tr>
+<tr class="separator:ac0bd58a7fa90491fefd875a2597cb31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1e86b9c53e9820d620410ac48cb7080"><td class="memItemLeft" align="right" valign="top"><a id="af1e86b9c53e9820d620410ac48cb7080" name="af1e86b9c53e9820d620410ac48cb7080"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>sizeY</b></td></tr>
+<tr class="separator:af1e86b9c53e9820d620410ac48cb7080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04d38fd3ec0debec65b92aaa1960f00a"><td class="memItemLeft" align="right" valign="top"><a id="a04d38fd3ec0debec65b92aaa1960f00a" name="a04d38fd3ec0debec65b92aaa1960f00a"></a>
+vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>helper</b></td></tr>
+<tr class="separator:a04d38fd3ec0debec65b92aaa1960f00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af27875b5c681bd88cf4f0d497ed67c52"><td class="memItemLeft" align="right" valign="top"><a id="af27875b5c681bd88cf4f0d497ed67c52" name="af27875b5c681bd88cf4f0d497ed67c52"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>value</b></td></tr>
+<tr class="separator:af27875b5c681bd88cf4f0d497ed67c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd6e392a0952f01570901eac2316a0c"><td class="memItemLeft" align="right" valign="top"><a id="acdd6e392a0952f01570901eac2316a0c" name="acdd6e392a0952f01570901eac2316a0c"></a>
+vector&lt; tuple&lt; int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>path</b></td></tr>
+<tr class="separator:acdd6e392a0952f01570901eac2316a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ada3cd96b69dc4fc418b9507f931edddc" name="ada3cd96b69dc4fc418b9507f931edddc"></a>
@@ -107,6 +145,94 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WritePath</b> ()</td>
 
 <p>Public function FindPath </p>
 <dl class="section return"><dt>Returns</dt><dd>Return if maze has path, calling internalFindPath</dd></dl>
+
+</div>
+</div>
+<a id="a1d1ba5235c7f7ef7c016d247a476ecdb" name="a1d1ba5235c7f7ef7c016d247a476ecdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d1ba5235c7f7ef7c016d247a476ecdb">&#9670;&nbsp;</a></span>internalFindPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Maze::internalFindPath </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tuple&lt; int, int &gt;&#160;</td>
+          <td class="paramname"><em>dir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Recursive function internalFindPath, Algorithm used for this problem was A* -&gt; Moving to every possible directions (Up, Down, Right, Left) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Position x</td></tr>
+    <tr><td class="paramname">y</td><td>Position y</td></tr>
+    <tr><td class="paramname">dir</td><td>Direction</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns TRUE if maze has path, FALSE if maze doesn't have path</dd></dl>
+
+</div>
+</div>
+<a id="a34c6dc44e9e6158cfceff89cbe4fbbee" name="a34c6dc44e9e6158cfceff89cbe4fbbee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34c6dc44e9e6158cfceff89cbe4fbbee">&#9670;&nbsp;</a></span>is_empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Maze::is_empty </td>
+          <td>(</td>
+          <td class="paramtype">ifstream &amp;&#160;</td>
+          <td class="paramname"><em>pFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to check if file is empty. Code used from <a href="https://stackoverflow.com/questions/2390912/checking-for-an-empty-file-in-c">https://stackoverflow.com/questions/2390912/checking-for-an-empty-file-in-c</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pFile</td><td>taking filestream</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return TRUE if file is empty otherwise FALSE if file is still has date in it</dd></dl>
 
 </div>
 </div>
@@ -153,7 +279,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WritePath</b> ()</td>
       </table>
 </div><div class="memdoc">
 
-<p>Function, which create new file with correct path in the maze </p>
+<p>Function, which create new file with correct path in the maze, "solved" added before name </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Name of the uploaded file</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns TRUE if everything went right, FALSE if file couldn't be opened</dd></dl>
 
 </div>
