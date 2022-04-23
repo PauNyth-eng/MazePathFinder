@@ -30,9 +30,9 @@ bool Maze::internalFindPath(int x, int  y, tuple<int, int> dir)
 	return result;
 }
 /// <summary>
-/// Public function FindPath
+/// Function to find a path
 /// </summary>
-/// <returns>Return if maze has path, calling internalFindPath</returns>
+/// <returns>Returns TRUE if maze has path, FALSE if maze doesn't have path</returns>
 bool Maze::FindPath()
 {
 	return internalFindPath(this->startX, this->startY, make_tuple(0, 0));
